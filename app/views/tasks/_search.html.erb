@@ -1,6 +1,10 @@
 <%= form_with(url: tasks_path, method: :get, data: {controller: "search-form", turbo_frame: "tasks", turbo_action: "advance"}) do |form| %>
-  <div class="">
-    <%= form.text_field :query, class: "py-3 px-4 rounded border", autocomplete: 'off', data: {action: "input->search-form#search"} %>
-    <%= form.submit 'x', class: "px-4 py-3 font-medium bg-blue-300 hover:bg-blue-400" %>
-  </div>
+  <form class="flex items-center">
+    <div class="relative w-full">
+        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <svg class="w-5 h-5" viewBox="0 -5 30 30"><path d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path></svg>
+        </div>
+        <%= form.text_field :query, placeholder: "Search", autocomplete: 'off', data: {action: "input->search-form#search"}, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md w-full pl-10 p-1" %>
+    </div>
+  </form>
 <% end %>
