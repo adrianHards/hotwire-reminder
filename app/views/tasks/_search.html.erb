@@ -1,0 +1,6 @@
+<%= form_with(url: tasks_path, method: :get, data: {controller: "search-form", turbo_frame: "tasks", turbo_action: "advance"}) do |form| %>
+  <div class="">
+    <%= form.text_field :query, class: "py-3 px-4 rounded border", autocomplete: 'off', data: {action: "input->search-form#search"} %>
+    <%= form.submit 'x', class: "px-4 py-3 font-medium bg-blue-300 hover:bg-blue-400" %>
+  </div>
+<% end %>
