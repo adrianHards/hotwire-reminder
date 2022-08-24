@@ -8,13 +8,21 @@ class TasksController < ApplicationController
     else
       @tasks = Task.all.sort_by(&:time).sort_by(&:date)
     end
-
     if turbo_frame_request?
       render partial: 'tasks', locals: { tasks: @tasks }
     else
       render :index
     end
   end
+
+  # def today
+  #   @tasks = Task.where(date: Time.now.strftime('%d/%m/%Y'))
+  #   if turbo_frame_request?
+  #     render partial: 'tasks', locals: { tasks: @tasks }
+  #   else
+  #     render :index
+  #   end
+  # end
 
   private
 

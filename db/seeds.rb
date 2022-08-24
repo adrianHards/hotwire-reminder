@@ -1,7 +1,7 @@
 puts 'creating 5 tasks'
 
 Task.create([
-              { name: 'Buy Groceries', date: Time.new(2022, 8, 28), time: '08:00' },
+              { name: 'Buy Groceries', date: Time.new(2022, 8, 24), time: '08:00' },
 
               { name: 'Play tennis', date: Time.new(2022, 8, 28), time: '13:00' },
 

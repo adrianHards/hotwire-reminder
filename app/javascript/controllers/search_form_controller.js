@@ -4,6 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   search() {
 
+    // replace with static target?
     let tabs = document.querySelector('.tabs').getElementsByClassName('tab')
 
     for (let tab of tabs) {
