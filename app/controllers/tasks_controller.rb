@@ -4,9 +4,9 @@ class TasksController < ApplicationController
   # GET /tasks
   def index
     if params[:query].present?
-      @tasks = Task.where('name LIKE ?', "%#{params[:query]}%")
+      @tasks = Task.where('name LIKE ?', "%#{params[:query]}%").sort_by(&:time).sort_by(&:date)
     else
-      @tasks = Task.all
+      @tasks = Task.all.sort_by(&:time).sort_by(&:date)
     end
 
     if turbo_frame_request?
