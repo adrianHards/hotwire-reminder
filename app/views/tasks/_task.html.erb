@@ -1,5 +1,14 @@
 <div id="<%= dom_id task %>" class="border-b">
-  <p class="py-3">
-    <%= link_to task.name, task_path(task), class: "text-sm text-slate-700" %>
+  <p class="pt-2 text-sm text-slate-700">
+    <%= task.name %>
   </p>
+
+  <div class="flex pb-2">
+    <p class="text-xs text-slate-700">
+      <%= "#{task.date.strftime('%d/%m/%Y')}," %>
+    </p>
+    <p class="text-xs text-slate-700">
+      &nbsp<%= "#{task.time.strftime('%H:%M')}" %>
+    </p>
+  </div>
 </div>
