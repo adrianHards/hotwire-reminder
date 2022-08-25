@@ -1,19 +1,19 @@
 <div id="<%= dom_id task %>" class="border-b flex">
 
   <div class="m-4">
-    <button class="w-4 h-4 rounded-full border border-slate-300"></button>
+    <button class="w-4 h-4 rounded-full border <%= task.status == 0 ? "border-slate-300" : "border-[#0279FF] bg-[#0279FF]" %> "></button>
   </div>
 
   <div>
-    <p class="pt-2 text-sm text-transparent text-[#0279FF] flex">
+    <p class="pt-2 text-sm flex <%= task.status == 0 ? "text-[#0279FF]" : "text-slate-300 line-through" %>  ">
       <%= task.name %>
     </p>
 
     <div class="flex pb-2">
-      <p class="text-xs text-slate-700">
+      <p class="text-xs <%= task.status == 0 ? "text-slate-700" : "text-slate-300 line-through" %>">
         <%= "#{task.date.strftime('%d/%m/%Y')}," %>
       </p>
-      <p class="text-xs text-slate-700">
+      <p class="text-xs <%= task.status == 0 ? "text-slate-700" : "text-slate-300 line-through" %>">
         &nbsp<%= "#{task.time.strftime('%H:%M')}" %>
       </p>
     </div>
