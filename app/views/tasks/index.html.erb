@@ -9,7 +9,8 @@
   </div>
 
   <div class="py-4 px-4 h-screen w-screen overflow-auto py-2 bg-grey-100">
-    <h1 id="header" class="text-4xl font-bold mb-4">All</h1>
+
+    <%= render "header" %>
     <%= render "tasks", tasks: @tasks %>
     <%= render "new", task: Task.new %>
   </div>

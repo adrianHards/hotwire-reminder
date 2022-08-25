@@ -1,14 +1,21 @@
-<div id="<%= dom_id task %>" class="border-b">
-  <p class="pt-2 text-sm text-slate-700">
-    <%= task.name %>
-  </p>
+<div id="<%= dom_id task %>" class="border-b flex">
 
-  <div class="flex pb-2">
-    <p class="text-xs text-slate-700">
-      <%= "#{task.date.strftime('%d/%m/%Y')}," %>
+  <div class="m-4">
+    <button class="w-4 h-4 rounded-full border border-slate-300"></button>
+  </div>
+
+  <div>
+    <p class="pt-2 text-sm text-transparent text-[#0279FF] flex">
+      <%= task.name %>
     </p>
-    <p class="text-xs text-slate-700">
-      &nbsp<%= "#{task.time.strftime('%H:%M')}" %>
-    </p>
+
+    <div class="flex pb-2">
+      <p class="text-xs text-slate-700">
+        <%= "#{task.date.strftime('%d/%m/%Y')}," %>
+      </p>
+      <p class="text-xs text-slate-700">
+        &nbsp<%= "#{task.time.strftime('%H:%M')}" %>
+      </p>
+    </div>
   </div>
 </div>
