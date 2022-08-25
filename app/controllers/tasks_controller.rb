@@ -4,9 +4,9 @@ class TasksController < ApplicationController
   # GET /tasks
   def index
     if params[:query].present?
-      @tasks = Task.where('name LIKE ?', "%#{params[:query]}%").sort_by(&:time).sort_by(&:date)
+      @tasks = Task.where('name LIKE ?', "%#{params[:query]}%").sort_by(&:time).sort_by(&:date).sort_by(&:status)
     else
-      @tasks = Task.all.sort_by(&:time).sort_by(&:date)
+      @tasks = Task.all.sort_by(&:time).sort_by(&:date).sort_by(&:status)
     end
     if turbo_frame_request?
       render partial: 'tasks', locals: { tasks: @tasks }
@@ -14,15 +14,6 @@ class TasksController < ApplicationController
       render :index
     end
   end
-
-  # def today
-  #   @tasks = Task.where(date: Time.now.strftime('%d/%m/%Y'))
-  #   if turbo_frame_request?
-  #     render partial: 'tasks', locals: { tasks: @tasks }
-  #   else
-  #     render :index
-  #   end
-  # end
 
   private
 

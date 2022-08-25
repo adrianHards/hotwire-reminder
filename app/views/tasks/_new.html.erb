@@ -1,17 +1,23 @@
 <%= form_with(model: task, id: "#{dom_id(task)}_form") do |form| %>
-  <div class="">
-    <%= form.label :name, class: "sr-only" %>
-    <div class="">
+
+  <div class="flex">
+
+    <div class="m-4">
+      <button class="status w-4 h-4 rounded-full border <%= task.status == 0 ? "border-slate-300" : "border-[#0279FF] bg-[#0279FF]" %> "></button>
+    </div>
+
+    <div>
       <%= form.text_field :name, class: "mt-2 mb-2 text-sm border-none outline-0 placeholder-slate-700", placeholder: "Placeholder" %>
+      <div class="flex pb-2 text-xs">
+        <p class="">
+          <%= form.date_field :date, class: "rounded-md outline-0 bg-[#F5F5F5] w-28 p-1 mr-2", placeholder: "Add Date" %>
+        </p>
+        <p class="">
+          <%= form.time_field :time, class: "rounded-md outline-0 bg-[#F5F5F5] w-16 p-1", placeholder: "Add Time" %>
+        </p>
+      </div>
     </div>
-    <div class="flex pb-2 text-xs">
-      <p class="">
-        <%= form.date_field :date, class: "rounded-md outline-0 bg-[#F5F5F5] w-28 p-1 mr-2", placeholder: "Add Date" %>
-      </p>
-      <p class="">
-        <%= form.time_field :time, class: "rounded-md outline-0 bg-[#F5F5F5] w-16 p-1", placeholder: "Add Time" %>
-      </p>
-    </div>
+
   </div>
 
 <% end %>

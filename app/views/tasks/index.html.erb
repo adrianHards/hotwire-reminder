@@ -9,8 +9,10 @@
   </div>
 
   <div class="py-4 px-4 h-screen w-screen overflow-auto py-2 bg-grey-100">
-
-    <%= render "header" %>
+    <%= render "title" %>
+    <div class="flex justify-between" data-controller="reveal">
+      <%= render "completed_header" %>
+    </div>
     <%= render "tasks", tasks: @tasks %>
     <%= render "new", task: Task.new %>
   </div>

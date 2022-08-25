@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import RevealController from "./reveal_controller"
+application.register("reveal", RevealController)
+
 import SearchFormController from "./search_form_controller"
 application.register("search-form", SearchFormController)
 
