@@ -4,7 +4,6 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   search() {
     // replace with static target instead?
-
     document.querySelector('#reveal').innerText = 'Show'
     // find tabs from DOM
     let tabs = document.querySelector('.tabs').getElementsByClassName('tab')
