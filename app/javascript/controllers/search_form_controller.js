@@ -4,7 +4,8 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   search() {
     // replace with static target instead?
-    document.querySelector('#reveal').innerText === 'Hide' ? document.querySelector('#reveal').innerText = 'Show' : console.log("show")
+
+    document.querySelector('#reveal').innerText = 'Show'
     // find tabs from DOM
     let tabs = document.querySelector('.tabs').getElementsByClassName('tab')
     // iterate over each tab, if any are selected, de-select them on submission of new search

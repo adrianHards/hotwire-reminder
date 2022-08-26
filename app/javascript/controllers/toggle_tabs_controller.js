@@ -14,6 +14,7 @@ export default class extends Controller {
   }
 
   all(event) {
+    document.querySelector('#reveal').innerText = 'Show'
     // if the other tab has been selected, de-select it first
     if (event.currentTarget.previousElementSibling.classList.contains('bg-[#0279FF]')) {
       event.currentTarget.previousElementSibling.classList.replace("bg-[#0279FF]", "bg-white");
