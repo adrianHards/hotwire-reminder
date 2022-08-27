@@ -16,8 +16,6 @@ export default class extends Controller {
   all(event) {
     // make sure toggle reverts back to show rather than hide
     document.querySelector('#reveal').innerText = 'Show'
-    // update completed number
-    document.querySelector('#completed_count').innerText = `${document.querySelectorAll('#complete').length} completed`
 
     // if the other tab has been selected, de-select it first
     if (event.currentTarget.previousElementSibling.classList.contains('bg-[#0279FF]')) {
@@ -32,5 +30,11 @@ export default class extends Controller {
       document.querySelector('#query').value = '';
       document.querySelector('form').requestSubmit();
     }
+
+    // update completed number
+    this.timeout = setTimeout(() => {
+      document.querySelector('#completed_count').innerText = `${document.querySelectorAll('#complete').length} completed`
+    }, 50);
+    
   }
 }
