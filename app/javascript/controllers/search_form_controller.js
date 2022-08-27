@@ -23,6 +23,7 @@ export default class extends Controller {
       // after 200 ms has pass submit search
       this.element.requestSubmit();
 
+      // on search update completed count to match new list
       this.timeout = setTimeout(() => {
         document.querySelector('#completed_count').innerText = `${document.querySelector('#list').children.length} completed`
       }, 50);
