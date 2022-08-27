@@ -7,7 +7,7 @@
   <div>
     <p class="pt-2 text-sm flex
       <%= if task.status == 0
-        Time.new(task.date.year, task.date.month, task.date.day).to_i < Time.now.to_i ? "text-rose-500" : "text-[#0279FF]"
+        Time.new(task.date.year, task.date.month, task.date.day).to_i < Time.now.to_i ? "text-rose-400" : "text-[#0279FF]"
       else
         "text-slate-300 line-through"
       end
@@ -23,7 +23,7 @@
         &nbsp<%= "#{task.time.strftime('%H:%M')}" %>
       </p>
     </div>
-    
+
   </div>
 </div>
 
