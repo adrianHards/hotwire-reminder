@@ -21,3 +21,5 @@ https://dev.to/dauncy/transitioning-from-sqlite-to-postgres-in-rails-56on
 https://web-crunch.com/posts/digging-into-turbo-with-ruby-on-rails-7
 https://www.colby.so/posts/turbo-rails-101-todo-list
 https://akshaykhot.com/building-to-do-list-using-hotwire-and-stimulus/
+
+dark mode
