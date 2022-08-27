@@ -6,8 +6,6 @@ module TasksHelper
     else 'Good Evening'
     end
   end
+
 end
 
-# <h2 class="text-2xl">
-#   <%= "#{helper_greeting}" %>
-# </h2>

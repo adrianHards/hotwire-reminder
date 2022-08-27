@@ -3,9 +3,15 @@
   <div class="m-4">
     <button class="w-4 h-4 rounded-full border <%= task.status == 0 ? "border-slate-300" : "border-[#0279FF] bg-[#0279FF]" %> "></button>
   </div>
-
+  
   <div>
-    <p class="pt-2 text-sm flex <%= task.status == 0 ? "text-[#0279FF]" : "text-slate-300 line-through" %>  ">
+    <p class="pt-2 text-sm flex
+      <%= if task.status == 0
+        Time.new(task.date.year, task.date.month, task.date.day).to_i < Time.now.to_i ? "text-rose-500" : "text-[#0279FF]"
+      else
+        "text-slate-300 line-through"
+      end
+    %>">
       <%= task.name %>
     </p>
 
@@ -17,5 +23,7 @@
         &nbsp<%= "#{task.time.strftime('%H:%M')}" %>
       </p>
     </div>
+    
   </div>
 </div>
+
