@@ -29,6 +29,12 @@ class TasksController < ApplicationController
     end
   end
 
+  def tick
+    @task = Task.find(params[:id])
+    @task.update(status: 1)
+    # render json: { message: "Success" }
+  end
+
   private
 
   def set_task

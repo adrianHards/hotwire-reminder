@@ -2,7 +2,12 @@
 
   <%= form_with(model: task) do |form| %>
     <div class="m-4">
-      <%= form.check_box :completed, class: "w-4 h-4 rounded-full border border-slate-300" %>
+      <%= form.check_box  :completed,
+                          data: {
+                          id: task.id,
+                          action: "reveal#tick"
+                          },
+                          class: "w-4 h-4 rounded-full border border-slate-300 hover:border-none hover:bg-[#0279FF]/20 focus:ring-0 focus:ring-white" %>
     </div>
   <% end %>
 
