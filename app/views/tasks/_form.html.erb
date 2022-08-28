@@ -7,13 +7,13 @@
     </div>
 
     <div>
-      <%= form.text_field :name, class: "mt-2 mb-2 text-sm border-none outline-0 placeholder-slate-700", placeholder: "Placeholder" %>
+      <%= form.text_field :name, class: "p-0 mt-2 text-sm border-none focus:ring-0", type: "text", autocomplete: "off", placeholder: "New Task" %>
       <div class="flex pb-2 text-xs">
-        <p class="">
-          <%= form.date_field :date, class: "rounded-md outline-0 bg-[#F5F5F5] w-28 p-1 mr-2", placeholder: "Add Date" %>
+        <p>
+          <%= form.date_field :date, class: "m-0 border-none text-xs rounded-md bg-[#F5F5F5] h-6 w-28 mr-2 p-1", placeholder: "Add Date" %>
         </p>
-        <p class="">
-          <%= form.time_field :time, class: "rounded-md outline-0 bg-[#F5F5F5] w-18 p-1", placeholder: "Add Time" %>
+        <p>
+          <%= form.time_field :time, class: "m-0 border-none text-xs rounded-md bg-[#F5F5F5] h-6 w-18 p-1", placeholder: "Add Time" %>
         </p>
       </div>
     </div>
@@ -21,3 +21,4 @@
   </div>
 
 <% end %>
+

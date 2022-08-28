@@ -5,9 +5,10 @@ class TasksController < ApplicationController
   def index
     @task = Task.new
     if params[:query].present?
-      @tasks = Task.where('name LIKE ?', "%#{params[:query]}%").sort_by(&:status).sort_by(&:time).sort_by(&:date)
+      @tasks = Task.where('name LIKE ?', "%#{params[:query]}%").sort_by(&:time).sort_by(&:date)
     else
-      @tasks = Task.all.sort_by(&:status).sort_by(&:time).sort_by(&:date)
+      @tasks = Task.all.sort_by(&:time).sort_by(&:date)
+      # .sort_by(&:status)
     end
     if turbo_frame_request?
       render partial: 'tasks', locals: { tasks: @tasks }

@@ -1,8 +1,10 @@
 <div id="<%= task.status == 0 ? "incomplete" : "complete" %>" class="border-b flex<%= task.status == 0 ? "" : " hidden"  %>">
 
-  <div class="m-4">
-    <button class="w-4 h-4 rounded-full border <%= task.status == 0 ? "border-slate-300" : "border-[#0279FF] bg-[#0279FF]" %> "></button>
-  </div>
+  <%= form_with(model: task) do |form| %>
+    <div class="m-4">
+      <%= form.check_box :completed, class: "w-4 h-4 rounded-full border border-slate-300" %>
+    </div>
+  <% end %>
 
   <div>
     <p class="pt-2 text-sm flex
@@ -26,4 +28,5 @@
 
   </div>
 </div>
+
 
