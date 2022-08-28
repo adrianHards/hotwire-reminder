@@ -8,13 +8,13 @@
 
   </div>
 
-  <div class="py-4 px-4 h-screen w-screen overflow-auto py-2 bg-grey-100">
+  <div class="py-2 px-4 h-screen w-screen overflow-auto bg-grey-100">
     <%= render "title" %>
     <div class="flex justify-between" data-controller="reveal">
       <%= render "completed", task: @tasks %>
     </div>
     <%= render "tasks", tasks: @tasks %>
-    <%= render "new", task: Task.new %>
+    <%= render "form", task: Task.new %>
   </div>
 
 </div>
