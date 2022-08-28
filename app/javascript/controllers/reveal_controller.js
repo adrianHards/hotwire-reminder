@@ -32,6 +32,7 @@ export default class extends Controller {
 
     // update tasks list
     document.querySelector('form').requestSubmit();
+    document.querySelector('#reveal').innerText = 'Show'
 
     // update completed count
     this.timeout = setTimeout(() => {

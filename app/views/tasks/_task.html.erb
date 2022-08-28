@@ -2,7 +2,7 @@
 
   <%= form_with(model: task) do |form| %>
     <div class="m-4">
-      <%= form.check_box  :completed,
+      <%= form.check_box  :status,
                           data: {
                           id: task.id,
                           action: "reveal#tick"

@@ -22,12 +22,32 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
+        # alternative method:
+        # format.turbo_stream
         format.html { redirect_to root_url, notice: "Task was successfully created" }
       # else
       #   format.html { render :new, status: :unprocessable_entity }
       end
     end
   end
+
+  # def edit
+  # end
+
+  # def update
+  #   respond_to do |format|
+  #     if @task.update(task_params)
+  #       format.html { redirect_to root_url, notice: "Task was successfully updated" }
+  #     # else
+  #     #   format.html { render :edit, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
+
+  # def destroy
+  #   @task.destroy
+  #   redirect_to root_url, notice: "Task was successfully deleted."
+  # end
 
   def tick
     @task = Task.find(params[:id])
