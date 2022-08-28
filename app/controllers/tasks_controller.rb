@@ -7,7 +7,7 @@ class TasksController < ApplicationController
     if params[:query].present?
       @tasks = Task.where('name LIKE ?', "%#{params[:query]}%").sort_by(&:status).sort_by(&:time).sort_by(&:date)
     else
-      @tasks = Task.all.sort_by(&:status).sort_by(&:time).sort_by(&:date).sort_by(&:status)
+      @tasks = Task.all.sort_by(&:status).sort_by(&:time).sort_by(&:date)
     end
     if turbo_frame_request?
       render partial: 'tasks', locals: { tasks: @tasks }
