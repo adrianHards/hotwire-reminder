@@ -13,8 +13,9 @@
     <div class="flex justify-between" data-controller="reveal">
       <%= render "completed", task: @tasks %>
     </div>
+
     <%= render "tasks", tasks: @tasks %>
-    <%= render "form", task: Task.new %>
+    <%= render "form", task: @task %>
   </div>
 
 </div>

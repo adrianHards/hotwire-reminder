@@ -1,9 +1,9 @@
-<%= form_with(model: task, id: "#{dom_id(task)}_form") do |form| %>
+<%= form_with(model: task) do |form| %>
 
   <div class="flex">
 
     <div class="m-4">
-      <button class="status w-4 h-4 rounded-full border <%= task.status == 0 ? "border-slate-300" : "border-[#0279FF] bg-[#0279FF]" %> "></button>
+      <button class="status w-4 h-4 rounded-full border border-slate-300"></button>
     </div>
 
     <div>

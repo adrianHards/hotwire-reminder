@@ -3,15 +3,28 @@ class TasksController < ApplicationController
 
   # GET /tasks
   def index
+    @task = Task.new
     if params[:query].present?
-      @tasks = Task.where('name LIKE ?', "%#{params[:query]}%").sort_by(&:time).sort_by(&:date).sort_by(&:status)
+      @tasks = Task.where('name LIKE ?', "%#{params[:query]}%").sort_by(&:status).sort_by(&:time).sort_by(&:date)
     else
-      @tasks = Task.all.sort_by(&:time).sort_by(&:date).sort_by(&:status)
+      @tasks = Task.all.sort_by(&:status).sort_by(&:time).sort_by(&:date).sort_by(&:status)
     end
     if turbo_frame_request?
       render partial: 'tasks', locals: { tasks: @tasks }
     else
       render :index
+    end
+  end
+
+  def create
+    @task = Task.new(task_params)
+
+    respond_to do |format|
+      if @task.save
+        format.html { redirect_to root_url, notice: "Task was successfully created" }
+      # else
+      #   format.html { render :new, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -22,6 +35,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:title, :status)
+    params.require(:task).permit(:name, :status, :date, :time)
   end
 end
