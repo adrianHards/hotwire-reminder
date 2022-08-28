@@ -31,7 +31,7 @@ class TasksController < ApplicationController
 
   def tick
     @task = Task.find(params[:id])
-    @task.update(status: 1)
+    @task.status == 0 ? @task.update(status: 1) : @task.update(status: 0)
     # render json: { message: "Success" }
   end
 
