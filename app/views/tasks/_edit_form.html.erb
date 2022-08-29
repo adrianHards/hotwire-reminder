@@ -1,0 +1,22 @@
+<%= form_with(model: task) do |form| %>
+
+  <div class="flex">
+
+    <div>
+      <%= form.text_field :name, class: "p-0 text-sm border-none focus:ring-0", type: "text", autocomplete: "off", placeholder: "Edit Task" %>
+      <div class="flex pb-2 text-xs">
+        <p>
+          <%= form.date_field :date, class: "h-6 w-28 mr-2 p-1 m-0 border-none focus:ring-0 text-xs rounded-md bg-[#F5F5F5]", placeholder: "Add Date" %>
+        </p>
+        <p>
+          <%= form.time_field :time, class: "h-6 w-18 p-1 m-0 border-none focus:ring-0 text-xs rounded-md bg-[#F5F5F5]", placeholder: "Add Time" %>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+<% end %>
+
+<%# add hidden to currenttarget stuff; then add listener to date and number and submit name when enter; if you click away outside then deselect %>
+<%# add custom routes and for each action? %>
