@@ -17,8 +17,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_23_134714) do
   create_table "tasks", force: :cascade do |t|
     t.string "name"
     t.integer "status", default: 0
-    t.date "date"
-    t.time "time"
+    t.date "date", default: "2022-08-29"
+    t.time "time", default: "2000-01-01 08:00:00"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

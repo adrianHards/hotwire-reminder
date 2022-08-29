@@ -1,6 +1,8 @@
+<%# Add a new task to the top of the list when it gets created %>
 <%= turbo_stream.prepend "tasks" do %>
   <%= render "task", task: @task %>
 <% end %>
+<%# Replace the existing form with a new instance of the form %>
 <%= turbo_stream.replace "#{dom_id(Task.new)}_form" do %>
   <%= render "form", task: Task.new %>
 <% end %>

@@ -18,8 +18,12 @@
       else
         "text-slate-300 line-through"
       end
-    %>">
-      <%= task.name %>
+      %>">
+
+      <%= turbo_frame_tag dom_id(task) do %>
+        <%= link_to task.name, edit_task_path(task) %>
+      <% end %>
+
     </p>
 
     <div class="flex pb-2">

@@ -30,14 +30,15 @@ export default class extends Controller {
          alert(data.message)
        })
 
-    // update tasks list
-    document.querySelector('form').requestSubmit();
-    document.querySelector('#reveal').innerText = 'Show'
 
-    // update completed count
+    // update tasks list, completed count and toggle hide
     this.timeout = setTimeout(() => {
-      document.querySelector('#completed_count').innerText = `${document.querySelectorAll('#complete').length} completed`
-    }, 100);
-  }
+      document.querySelector('form').requestSubmit();
+      document.querySelector('#reveal').innerText = 'Show'
+      this.timeout = setTimeout(() => {
+        document.querySelector('#completed_count').innerText = `${document.querySelectorAll('#complete').length} completed`
+      }, 50);
+    }, 50);
 
+  }
 }
