@@ -1,5 +1,4 @@
-<div id="<%= task.status == 0 ? "incomplete" : "complete" %>" class="border-b flex<%= task.status == 0 ? "" : " hidden"  %>">
-
+<div id="<%= task.status == 0 ? "incomplete" : "complete" %>" class="border-b flex <%= task.status == 0 ? "" : " hidden"  %>">
   <%= form_with(model: task) do |form| %>
     <div class="mt-2 mb-2 mr-2">
       <%= form.check_box  :status,
@@ -14,7 +13,7 @@
   <%= turbo_frame_tag dom_id(task) do %>
     <%= link_to edit_task_path(task) do %>
       <div>
-        <p class="pt-2 text-sm flex
+        <p class="pt-2 text-sm flex-1
           <%= if task.status == 0
             Time.new(task.date.year, task.date.month, task.date.day, task.time.hour).to_i < Time.now.to_i ? "text-rose-400" : "text-[#0279FF]"
           else
@@ -37,14 +36,14 @@
     <% end %>
   <% end %>
 
-  <div class="inline-block ml-2">
+  <div class="mt-5 ml-auto">
     <%= button_to task_path(task), method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}} do %>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="#6B7280" class="w-4 h-4 mt-5 ml-4 hover:stroke-rose-400">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="#6B7280" class="w-4 h-4 hover:stroke-rose-400">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
       </svg>
     <% end %>
   </div>
-
 </div>
+
 
 
