@@ -1,7 +1,7 @@
 <div id="<%= task.status == 0 ? "incomplete" : "complete" %>" class="border-b flex<%= task.status == 0 ? "" : " hidden"  %>">
 
   <%= form_with(model: task) do |form| %>
-    <div class="m-4">
+    <div class="mt-2 mb-2 mr-2">
       <%= form.check_box  :status,
                           data: {
                           id: task.id,
