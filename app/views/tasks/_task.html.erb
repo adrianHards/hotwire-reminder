@@ -7,7 +7,7 @@
                           id: task.id,
                           action: "reveal#tick"
                           },
-                          class: "w-4 h-4 rounded-full border border-slate-300 hover:border-none hover:bg-[#0279FF]/20 focus:ring-0 focus:ring-white" %>
+                          class: "w-4 h-4 rounded-full border border-slate-300 hover:cursor-pointer hover:border-none hover:bg-[#0279FF]/20 focus:ring-0 focus:ring-white" %>
     </div>
   <% end %>
 
@@ -36,6 +36,15 @@
       </div>
     <% end %>
   <% end %>
+
+  <div class="inline-block ml-2">
+    <%= button_to task_path(task), method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}} do %>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="#6B7280" class="w-4 h-4 mt-5 ml-4 hover:stroke-rose-400">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    <% end %>
+  </div>
+
 </div>
 
 
