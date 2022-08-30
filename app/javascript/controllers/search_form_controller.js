@@ -25,7 +25,7 @@ export default class extends Controller {
 
       // on search update completed count to match new list
       this.timeout = setTimeout(() => {
-        document.querySelector('#completed_count').innerText = `${document.querySelectorAll('#complete').length} completed`
+        document.querySelector('#completed_count').innerText = `${document.querySelectorAll('#complete').length} Completed Tasks`
       }, 50);
 
     }, 200);

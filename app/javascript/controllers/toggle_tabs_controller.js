@@ -33,8 +33,8 @@ export default class extends Controller {
 
     // update completed number
     this.timeout = setTimeout(() => {
-      document.querySelector('#completed_count').innerText = `${document.querySelectorAll('#complete').length} completed`
+      document.querySelector('#completed_count').innerText = `${document.querySelectorAll('#complete').length} Completed Tasks`
     }, 50);
-    
+
   }
 }

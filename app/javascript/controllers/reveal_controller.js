@@ -36,7 +36,7 @@ export default class extends Controller {
       document.querySelector('form').requestSubmit();
       document.querySelector('#reveal').innerText = 'Show'
       this.timeout = setTimeout(() => {
-        document.querySelector('#completed_count').innerText = `${document.querySelectorAll('#complete').length} completed`
+        document.querySelector('#completed_count').innerText = `${document.querySelectorAll('#complete').length} Completed Tasks`
       }, 50);
     }, 50);
 
