@@ -20,6 +20,14 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
 
+    if @task.date.nil?
+      @task.date = Time.now.strftime('%d/%m/%Y')
+    end
+
+    if @task.time.nil?
+      @task.time = Time.now.strftime('%H:00')
+    end
+
     respond_to do |format|
       if @task.save
         # alternative method:
