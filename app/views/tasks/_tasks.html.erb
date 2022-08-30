@@ -1,5 +1,6 @@
 <%=  turbo_frame_tag "tasks" do %>
   <div data-controller="reveal">
     <%= render tasks %>
+    <%# <%= render "no_tasks" if @tasks.select {|task| task.status == 0 }.count == 0 %>
   </div>
 <% end %>

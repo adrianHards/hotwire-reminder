@@ -6,4 +6,5 @@ class Task < ApplicationRecord
             length: { minimum: 5, maximum: 50,
                       too_long: 'Too long! %{count} characters is the maximum allowed',
                       too_short: 'Too short! %{count} characters is the minimum allowed' }
+
 end
