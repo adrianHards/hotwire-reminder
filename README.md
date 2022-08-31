@@ -1,4 +1,5 @@
-# Re-creating Apple's Reminder app in Rails (using Turbo!)
+# Turbo Reminder
+Recreating a simplistic version of Apple's [reminders](https://apps.apple.com/us/app/reminders/id1108187841) app as a [single page application](https://en.wikipedia.org/wiki/Single-page_application) using [Hotwire Turbo](https://turbo.hotwired.dev/).
 
 <!-- references:
 
