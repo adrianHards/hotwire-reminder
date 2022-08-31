@@ -7,7 +7,7 @@
 # Turbo Reminder
 Recreating a simplistic version of Apple's [reminders](https://apps.apple.com/us/app/reminders/id1108187841) app as a [single page application](https://en.wikipedia.org/wiki/Single-page_application) using [Hotwire Turbo](https://turbo.hotwired.dev/).
 
-# Features
+## Features
 
 ### Search
 ![search](https://user-images.githubusercontent.com/93719632/187683285-05e4c3fd-e745-450e-a296-ddff0ac3c5d7.gif)
@@ -17,6 +17,15 @@ Recreating a simplistic version of Apple's [reminders](https://apps.apple.com/us
 
 ### Add and Edit
 ![edit](https://user-images.githubusercontent.com/93719632/187683475-bad2a8e1-f9e9-4aaf-ae99-97063501324e.gif)
+
+## Bugs
+
+## To Do
+* add categories (e.g. 'clean room' might fall under 'chores'
+* make it responsive
+* order completed tasks toward bottom
+* dark mode on toggle
+* make lists draggable
 
 <p align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=adrianHards/turbo_reminder" id="counter">
