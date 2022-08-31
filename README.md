@@ -18,6 +18,9 @@ Recreating a simplistic version of Apple's [reminders](https://apps.apple.com/us
 ### Add and Edit
 ![edit](https://user-images.githubusercontent.com/93719632/187683475-bad2a8e1-f9e9-4aaf-ae99-97063501324e.gif)
 
+<p align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=adrianHards/turbo_reminder" id="counter">
+</p>
 
 <!-- references:
 
@@ -26,3 +29,4 @@ https://akshaykhot.com/building-to-do-list-using-hotwire-and-stimulus/
 https://web-crunch.com/posts/turbo-charged-real-time-search-ruby-on-rails-7
 
  -->
+
