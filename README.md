@@ -21,7 +21,7 @@ Recreating a simplistic version of Apple's [reminders](https://apps.apple.com/us
 ## Bugs
 
 ## To Do
-* add categories (e.g. 'clean room' might fall under 'chores'
+* add categories (e.g. 'clean room' might fall under 'chores')
 * make it responsive
 * order completed tasks toward bottom
 * dark mode on toggle
