@@ -28,14 +28,16 @@ puts "created #{Task.count} tasks, where #{Task.where(status: 1).count} are comp
 puts 'creating 4 categories'
 
 Category.create([
-  { name: 'Home' },
+  { name: 'Home', emoji: '🏠' },
 
-  { name: 'Work' },
+  { name: 'Work', emoji: '👨‍💻' },
 
-  { name: 'Social' },
+  { name: 'Social', emoji: '🧉' },
 
-  { name: 'Groceries' },
+  { name: 'Groceries', emoji: '🍏' },
 
 ])
 
 puts "created #{Category.count} categories"
+
+puts "for example: #{Category.first.name}, #{Category.first.emoji}"
