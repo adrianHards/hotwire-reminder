@@ -7,4 +7,6 @@ class Task < ApplicationRecord
                       too_long: 'Too long! %{count} characters is the maximum allowed',
                       too_short: 'Too short! %{count} characters is the minimum allowed' }
 
+  # validates_presence_of :name
+
 end
