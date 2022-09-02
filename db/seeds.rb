@@ -24,3 +24,18 @@ Task.create([
             ])
 
 puts "created #{Task.count} tasks, where #{Task.where(status: 1).count} are complete and the rest are incomplete"
+
+puts 'creating 4 categories'
+
+Category.create([
+  { name: 'Home' },
+
+  { name: 'Work' },
+
+  { name: 'Social' },
+
+  { name: 'Groceries' },
+
+])
+
+puts "created #{Category.count} categories"
