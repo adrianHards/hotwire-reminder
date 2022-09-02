@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_02_091845) do
     t.time "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "category_id", null: false
+    t.bigint "category_id"
     t.index ["category_id"], name: "index_tasks_on_category_id"
   end
 
