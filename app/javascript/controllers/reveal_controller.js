@@ -10,6 +10,10 @@ export default class extends Controller {
     document.querySelector('#reveal').innerText === 'Show' ? document.querySelector('#reveal').innerText = 'Hide' : document.querySelector('#reveal').innerText = 'Show'
   }
 
+  delete() {
+    document.querySelector('#reveal').innerText === 'Hide' ? document.querySelector('#reveal').innerText = 'Show' : document.querySelector('#reveal').innerText = 'Show'
+  }
+
   tick(e) {
     const id = e.target.dataset.id
     const csrfToken = document.querySelector("[name='csrf-token']").content

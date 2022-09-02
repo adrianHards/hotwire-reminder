@@ -37,7 +37,7 @@
   <% end %>
 
   <div class="mt-5 ml-auto">
-    <%= button_to task_path(task), method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}} do %>
+    <%= button_to task_path(task), method: :delete, form: {data: {action: :"click->reveal#delete", turbo_confirm: 'Are you sure?'}} do %>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="#6B7280" class="w-4 h-4 hover:stroke-rose-400">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
       </svg>
