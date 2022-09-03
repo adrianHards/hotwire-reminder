@@ -32,10 +32,16 @@ Recreating a simplistic version of Apple's [reminders](https://apps.apple.com/us
 </p>
 
 <!-- references:
+Turbo Intro
+https://www.hotrails.dev/turbo-rails/turbo-rails-tutorial-introduction
 
+Turbo Tutorials:
 https://web-crunch.com/posts/digging-into-turbo-with-ruby-on-rails-7
 https://akshaykhot.com/building-to-do-list-using-hotwire-and-stimulus/
 https://web-crunch.com/posts/turbo-charged-real-time-search-ruby-on-rails-7
+
+RSpec:
+https://semaphoreci.com/community/tutorials/how-to-test-rails-models-with-rspec
 
  -->
 
