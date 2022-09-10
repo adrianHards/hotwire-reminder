@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: turbo_production
-  # username: ahards
-  # password: <%= ENV["TURBO_DATABASE_PASSWORD"] %>
+  username: turbo
+  password: <%= ENV["TURBO_DATABASE_PASSWORD"] %>
