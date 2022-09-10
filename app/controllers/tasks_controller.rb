@@ -3,6 +3,7 @@ class TasksController < ApplicationController
 
   # GET /tasks
   def index
+    @categories = Category.all
     @task = Task.new
     if params[:query].present?
       @tasks = Task.where('name LIKE ?', "%#{params[:query]}%").sort_by(&:time).sort_by(&:date)
