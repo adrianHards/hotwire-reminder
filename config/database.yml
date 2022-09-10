@@ -83,4 +83,4 @@ production:
   <<: *default
   database: turbo_production
   username: turbo
-  password: <%= ENV["TURBO_DATABASE_PASSWORD"] %>
+  password:
