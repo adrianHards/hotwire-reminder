@@ -1,9 +1,3 @@
-<h1 align="center">
-
-  [DEMO](https://turbo-reminder.herokuapp.com/)
-  
-</h1>
-
 <p align="center">
   <!-- version -->
   <img src='https://badgen.net/badge/Ruby/v3.1.2/blue' />
@@ -11,7 +5,11 @@
 </p>
 
 # Turbo Reminder
-Recreating a simplistic version of Apple's [reminders](https://apps.apple.com/us/app/reminders/id1108187841) app as a [single page application](https://en.wikipedia.org/wiki/Single-page_application) using [Hotwire Turbo](https://turbo.hotwired.dev/).
+Recreating a simplistic version of Apple's [reminders](https://apps.apple.com/us/app/reminders/id1108187841) app as a [single page application](https://en.wikipedia.org/wiki/Single-page_application) using [Hotwire Turbo](https://turbo.hotwired.dev/). Click [here](https://turbo-reminder.herokuapp.com/) to see it in action. 
+
+## Installation
+
+I used Rails v7.0.3.1 and Ruby v3.1.2. 
 
 ## Features
 
@@ -23,15 +21,6 @@ Recreating a simplistic version of Apple's [reminders](https://apps.apple.com/us
 
 ### Add and Edit
 ![edit](https://user-images.githubusercontent.com/93719632/187683475-bad2a8e1-f9e9-4aaf-ae99-97063501324e.gif)
-
-## Bugs
-
-## To Do
-* add categories (e.g. 'clean room' might fall under 'chores')
-* make it responsive
-* order completed tasks toward bottom
-* dark mode on toggle
-* make lists draggable
 
 <p align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=adrianHards/turbo_reminder" id="counter">
