@@ -4,7 +4,7 @@
   <img src='https://badgen.net/badge/Rails/v7.0.3.1/blue' />
 </p>
 
-# Turbo Reminder
+## About
 Recreating a simplistic version of Apple's [reminders](https://apps.apple.com/us/app/reminders/id1108187841) app as a [single page application](https://en.wikipedia.org/wiki/Single-page_application) using [Hotwire Turbo](https://turbo.hotwired.dev/). Click [here](https://turbo-reminder.herokuapp.com/) to see it in action. 
 
 ## Installation
@@ -15,6 +15,7 @@ I used Rails v7.0.3.1 and Ruby v3.1.2.
 git clone git@github.com:adrianHards/hotwire-reminder.git
 cd hotwire-reminder
 bundle
+bin/rails db:setup
 bin/dev
 ```
 
