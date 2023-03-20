@@ -15,6 +15,7 @@ I used Rails v7.0.3.1 and Ruby v3.1.2.
 git clone git@github.com:adrianHards/hotwire-reminder.git
 cd hotwire-reminder
 bundle
+yarn install
 bin/rails db:setup
 bin/dev
 ```
