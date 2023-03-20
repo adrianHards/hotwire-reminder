@@ -22,7 +22,7 @@ bin/dev
 
 ## Schema
 
-
+<img src="https://www.datensen.com/blog/wp-content/uploads/2021/10/one-to-many-relationship.png">
 
 ## Features
 
