@@ -9,7 +9,7 @@ Recreating a simplistic version of Apple's [reminders](https://apps.apple.com/us
 
 ## Installation
 
-I used Rails v7.0.3.1 and Ruby v3.1.2. 
+Made with Rails v7.0.3.1 and Ruby v3.1.2. 
 
 ```
 git clone git@github.com:adrianHards/hotwire-reminder.git
