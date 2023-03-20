@@ -20,6 +20,10 @@ bin/rails db:setup
 bin/dev
 ```
 
+## Schema
+
+
+
 ## Features
 
 ### Search
