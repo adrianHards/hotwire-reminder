@@ -30,11 +30,12 @@ bin/dev
 ### Add and Edit
 ![edit](https://user-images.githubusercontent.com/93719632/187683475-bad2a8e1-f9e9-4aaf-ae99-97063501324e.gif)
 
+<!--
 <p align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=adrianHards/turbo_reminder" id="counter">
 </p>
 
-<!-- references:
+ references:
 Turbo Intro
 https://www.hotrails.dev/turbo-rails/turbo-rails-tutorial-introduction
 
